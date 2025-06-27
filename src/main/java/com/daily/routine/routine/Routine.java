@@ -30,7 +30,8 @@ public class Routine {
     private Category category;
 
     @Column
-    private boolean isDone;
+    @Enumerated(EnumType.STRING)
+    private Cycle cycle;
 
     @Column(nullable = false)
     private LocalDateTime startTime;

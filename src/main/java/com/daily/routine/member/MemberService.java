@@ -1,17 +1,20 @@
 package com.daily.routine.member;
 
+import com.daily.routine.member.dto.FixRequestDto;
+import com.daily.routine.member.dto.JoinRequestDto;
+import com.daily.routine.member.dto.ReadResponseDto;
 import org.springframework.stereotype.Service;
 
 @Service
 public interface MemberService {
 
-    void join(Member member);
+    void join(JoinRequestDto dto);
 
     Long login(String email, String password);
 
-    Member readMyAccount(Long memberId);
+    ReadResponseDto readMyAccount(Long memberId);
 
-    void fixMyAccount(Long memberId);
+    void fixMyAccount(Long memberId, FixRequestDto dto);
 
     void deleteAccount(Long memberId);
 
